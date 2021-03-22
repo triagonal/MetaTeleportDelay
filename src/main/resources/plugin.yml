@@ -1,0 +1,6 @@
+name: MetaTeleportDelay
+version: @version@
+main: xyz.triagonal.metateleportdelay.MetaTeleportDelay
+author: triagonal
+api-version: 1.16
+depend: [Essentials, LuckPerms]
