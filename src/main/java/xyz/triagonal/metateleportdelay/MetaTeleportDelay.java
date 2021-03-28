@@ -5,6 +5,7 @@ import net.ess3.api.events.teleport.TeleportWarmupEvent;
 import net.luckperms.api.LuckPerms;
 import net.luckperms.api.model.user.User;
 import net.luckperms.api.node.NodeType;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -18,6 +19,7 @@ import java.util.logging.Level;
 public final class MetaTeleportDelay extends JavaPlugin implements Listener {
 
     private static final String META_KEY = "essx-teleport-delay";
+    private static final int METRICS_ID = 10844;
 
     private IEssentials essentials;
     private LuckPerms luckPerms;
@@ -45,6 +47,8 @@ public final class MetaTeleportDelay extends JavaPlugin implements Listener {
         }
 
         this.getServer().getPluginManager().registerEvents(this, this);
+
+        Metrics metrics = new Metrics(this, METRICS_ID);
     }
 
     @Override

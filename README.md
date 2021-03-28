@@ -4,6 +4,8 @@ MetaTeleportDelay is a small plugin to allow for customizable teleport delay tim
 
 Requires EssentialsX `2.18.0` or above and a recent version of LuckPerms.
 
+This plugin uses [bStats](https://bstats.org/) for metrics collection. You can disable metrics collection by using the global bStats config, located at `/plugins/bStats/config.yml`.
+
 ## Usage
 
 MetaTeleportDelay uses LuckPerms' meta system to determine the teleport delay for a user. Set user or group based meta with the key `essx-teleport-delay` to define a delay. The value of the meta pair will always override the value in the EssentialsX config, even if the values are the same.
